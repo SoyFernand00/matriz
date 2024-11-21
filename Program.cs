@@ -33,6 +33,9 @@ for (int f = 0; f < mat.Length; f++)
 Console.WriteLine();
 */
 
+
+
+/*
 //bidimensional
 Random rnd = new Random();
 int a=0, b=0;
@@ -68,6 +71,63 @@ for (int f = 0; f < mat.Length; f++)
     Console.WriteLine();
 }
 Console.WriteLine();
+*/
 
+
+
+Random rnd = new Random();
+int a = 0, b = 0;
+int num = rnd.Next(a, b);
+int Fil = 5;
+int col = 3;
+int[,] mat = new int[Fil, col];
+//ingreso
+
+Console.WriteLine("Minimo: ");
+a = int.Parse(Console.ReadLine());
+Console.WriteLine("Maximo: ");
+b = int.Parse(Console.ReadLine());
+
+
+for (int f = 0; f < mat.GetLength(0); f++)
+{
+    for (int c = 0; c < mat.GetLength(1); c++)
+    {
+        mat[f, c] = rnd.Next(a, b + 1);
+    }
+}
+
+//salida
+
+for (int f = 0; f < mat.GetLength(0); f++)
+{
+    for (int c = 0; c < mat.GetLength(1); c++)
+    {
+        Console.Write($"{mat[f, c]}, ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+
+
+for (int f = 0; f < mat.GetLength(0); f++)
+{
+    int suma = 0;
+    for (int c = 0; c < mat.GetLength(1); c++)
+    {
+        suma = suma + mat[f, c];
+    }
+    Console.WriteLine($"Suma de fila {f} es {suma}");
+}
+
+for (int c = 0; c < mat.GetLength(1); c++)
+{
+    int suma = 0;
+    for (int f = 0; f < mat.GetLength(0); f++)
+    {
+        suma = suma + mat[f, c];
+    }
+    Console.WriteLine($"Suma de fila {c} es {suma}");
+}
 
 
