@@ -131,3 +131,99 @@ for (int c = 0; c < mat.GetLength(1); c++)
 }
 
 
+//CLASE PRACTICA
+
+//problema 1
+/*
+Console.Write("Ingrese # filas : ");
+int f=int.Parse(Console.ReadLine());
+Console.Write("Ingrese # Columnas: ");
+int c=int.Parse(Console.ReadLine());
+int[,] matriz=new int[f,c];
+
+Random rnd=new Random();
+
+Console.WriteLine("Matriz generada: ");
+for (int i = 0; i < f; i++)
+{
+    for (int j = 0; j < c; j++)
+    {
+        matriz[i, j] = rnd.Next(30, 51);
+        Console.Write($"{matriz[i, j]} ");
+    }
+    Console.WriteLine("");
+}
+*/
+
+//problema 2
+/*
+Console.Write("Ingrese # matriz : ");
+int num = int.Parse(Console.ReadLine());
+
+int[,] matriz = new int[num, num];
+int[,] trnaspuesta = new int[num, num];
+
+Random rnd = new Random();
+
+Console.WriteLine("Matriz origin: ");
+for (int i = 0; i < num; i++)
+{
+    for (int j = 0; j < num; j++)
+    {
+        matriz[i, j] = rnd.Next(40, 51);
+        Console.Write($"{matriz[i, j]} ");
+    }
+    Console.WriteLine("");
+}
+
+Console.WriteLine("MATRIZ TRANSPORTE");
+for (int i = 0; i < num; i++)
+{
+    for (int j = 0; j < num; j++)
+    {
+        trnaspuesta[j,i]=matriz[i,j];
+    }
+}
+for (int i = 0; i < num; i++)
+{
+    for (int j = 0; j < num; j++)
+    {
+        Console.Write($"{trnaspuesta[i, j]} ");
+    }
+    Console.WriteLine("");
+
+}
+*/
+
+
+//PROBLEMA 3
+/*
+using System;
+
+Console.Write("Ingrese # filas : ");
+int f = int.Parse(Console.ReadLine());
+Console.Write("Ingrese # Columnas: ");
+int c = int.Parse(Console.ReadLine());
+
+int[,] matriz = new int[f, c];
+Random rnd = new Random();
+
+int[] suma=new int[c];
+Console.WriteLine("Matriz generada: ");
+for (int i = 0; i < f; i++)
+{
+    for (int j = 0; j < c; j++)
+    {
+        matriz[i, j] = rnd.Next(20, 31);
+        Console.Write($"{matriz[i, j]} ");
+        suma[j] += matriz[i, j];
+    }
+    Console.WriteLine("");
+}
+Console.BackgroundColor = ConsoleColor.Yellow;
+for(int i = 0;i < suma.Length; i++)
+{
+    Console.Write($"{suma[i]} ");
+}
+Console.ResetColor();
+*/
