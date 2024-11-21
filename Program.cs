@@ -227,3 +227,79 @@ for(int i = 0;i < suma.Length; i++)
 }
 Console.ResetColor();
 */
+
+
+
+//problema 4
+
+using ConsoleApp3;
+
+string regresar;
+productos p = new productos();
+do
+{
+    Console.WriteLine("Registrar [1]: ");
+    Console.WriteLine("Mostrar [2]: ");
+    Console.WriteLine("Modificar [3]: ");
+    Console.WriteLine("Fin [0]: ");
+
+    Console.WriteLine("INGRESE OPCION: ");
+    int op = int.Parse(Console.ReadLine());
+    switch (op)
+    {
+        case 0: Environment.Exit(0); break;
+        case 1:
+            p.insertar();
+            break;
+        case 2:
+            p.insertar();
+            break;
+        case 3:
+
+            break;
+    }
+    Console.WriteLine("Regresar? [si]: ");
+    regresar = Console.ReadLine().Trim().ToLower();
+} while (regresar == "si");
+
+//creacion de clase productos
+/*
+string[,] producto = new string[0, 3];
+int posicion = 0;
+
+public void redimensionar(int ntam)
+{
+    string[,] nuevo = new string[ntam, 3];
+    for (int i = 0; i < posicion; i++)
+    {
+        for (int j = 0; j < producto.Length; j++)
+        {
+            nuevo[i, j] = producto[i, j];
+        }
+    }
+    producto = nuevo;
+}
+public void insertar()
+{
+    redimensionar(posicion + 1);
+    Console.Write("Ingrese nombre: ");
+    producto[posicion, 0] = Console.ReadLine();
+    Console.Write("Ingrese precio: ");
+    producto[posicion, 1] = Console.ReadLine();
+    Console.Write("Ingrese stock: ");
+    producto[posicion, 2] = Console.ReadLine();
+    posicion++;
+
+    Console.WriteLine("PRODUCTO REGISTRADO");
+}
+public void mostrar()
+{
+    for (int i = 0; i < posicion; i++)
+    {
+        Console.WriteLine("Producto N° " + (i + 1));
+        Console.WriteLine("Precio: " + producto[i, 1]);
+        Console.WriteLine("Stock: " + producto[i, 2]);
+        Console.WriteLine();
+    }
+}
+*/
